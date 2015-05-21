@@ -1,0 +1,13 @@
+LOCAL_PATH:= $(call my-dir)
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES:= aicVM-prop.cpp
+
+LOCAL_CFLAGS:=-O2 -g
+LOCAL_CFLAGS+=-DLINUX -DIN_RING3 -DRT_OS_LINUX
+
+LOCAL_MODULE:=aicVM-prop
+LOCAL_MODULE_TAGS := optional
+
+include $(BUILD_EXECUTABLE)
+
